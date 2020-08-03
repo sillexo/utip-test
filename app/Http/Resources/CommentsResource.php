@@ -24,7 +24,7 @@ class CommentsResource extends ResourceCollection
 
     public function with($request)
     {
-        $included  = $this->collection->map(
+        $included = $this->collection->map(
             function ($article) {
                 return $article->author;
             }

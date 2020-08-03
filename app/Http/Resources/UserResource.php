@@ -26,4 +26,16 @@ class UserResource extends Resource
             ],
         ];
     }
+
+    public function with($request)
+    {
+        $hasProfile = $request->profile ? $request->profile : false;
+
+        if ($hasProfile) {
+            return [
+                'included' => new ProfileRelationshipResource($this->profile)
+            ];
+        }
+        return [];
+    }
 }

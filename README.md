@@ -73,6 +73,7 @@ User - Role
 * Вызов API-методов доступен только авторизованным пользователям
 * CRUD-операции для каждой из моделей (см. ниже)
 * Получение связей моделей (см. ниже)
+* Расширение модели дополнительными параметрами в GET-запросах (см. ниже)
 * Права доступа
   * Просмотр Comment доступен всем пользователям, создание, редактирование кроме заблокированных
   * Создание, редактирование Article доступен менеджерам и админу
@@ -128,16 +129,19 @@ GET /api/refresh
 List Users
 GET /api/users
 
-Create Users
+Create User
 POST /api/users
 
-Show Users
+Show User
 GET /api/users/{id}
 
-Update Users
+Show User with additional parameter
+GET /api/users/{id}?profile=true
+
+Update User
 PUT /api/users/{id}
 
-Delete Users
+Delete User
 DELETE /api/users/{id}
 ```
 
@@ -166,16 +170,16 @@ GET /api/users?filter[email]=email@mail.ru
 List Roles
 GET /api/roles
 
-Create Roles
+Create Role
 POST /api/roles
 
-Show Roles
+Show Role
 GET /api/roles/{id}
 
-Update Roles
+Update Role
 PUT /api/roles/{id}
 
-Delete Roles
+Delete Role
 DELETE /api/roles/{id}
 ```
 
@@ -200,16 +204,16 @@ GET /api/roles?filter[name]=Role Name
 List Articles
 GET /api/articles
 
-Create Articles
+Create Article
 POST /api/articles
 
-Show Articles
+Show Article
 GET /api/articles/{id}
 
-Update Articles
+Update Article
 PUT /api/articles/{id}
 
-Delete Articles
+Delete Article
 DELETE /api/articles/{id}
 ```
 
@@ -244,16 +248,16 @@ GET /api/articles?filter[title]=Article Title
 List Comments
 GET /api/comments
 
-Create Comments
+Create Comment
 POST /api/comments
 
-Show Comments
+Show Comment
 GET /api/comments/{id}
 
-Update Comments
+Update Comment
 PUT /api/comments/{id}
 
-Delete Comments
+Delete Comment
 DELETE /api/comments/{id}
 ```
 
